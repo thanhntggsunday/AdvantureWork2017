@@ -1,0 +1,269 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+
+}
+
+<div class="container-fluid">
+    <label value="CREATE" id="edit-flag" class="d-none"></label>
+   
+
+    <div class="col-md-12">
+        <span id="msg-error"></span>
+    </div>
+
+    <div class="myprofile-box">
+        <div class="card">
+            <div class="card-body ">
+                <h4 class="login-box-msg"><b>Add user</b> </h4>
+
+                <form class="userform">
+                    <input type="text" name="id" disabled class="form-control d-none" id="id">
+
+                    <div class="form-group">
+                        <label>Email:</label><br>
+                        <input type="text" name="email" class="form-control" id="email" placeholder="Email" required="required" >
+                    </div>
+                    <div class="form-group">
+                        <label>Full name:</label><br>
+                        <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full name" required="required">
+                    </div>
+                    @*<div class="form-group">
+                            <div class="form-group">
+                                <label>User name:</label><br>
+                                <input type="text" name="user_name" class="form-control" id="user_name" placeholder="Username">
+                            </div>
+                        </div>*@
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Password:</label><br>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Address:</label><br>
+                            <input type="text" name="address" class="form-control" id="address" placeholder="Address">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+
+                            <a href="#" id="showLookup">Lookup</a>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Country:</label><br>
+                            <input type="text" name="country" class="form-control" id="country" disabled>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>CountryRegion Code:</label><br>
+                            <input type="text" name="country-region-code" class="form-control" id="country-region-code" disabled>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Avatar:</label><br>
+                            <img src="" id="user-img" height="50" width="50" />
+                        </div>
+                        <div class="form-group">
+                            <input type="file" id="imageUploadForm" name="image" multiple="multiple" />
+                            <input type="text" name="Avatar" class="form-control d-none" id="avatar" value="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>BirthDay:</label><br>
+                            <input type="date" name="birth_day" class="form-control" id="birth_day" placeholder="Birthday">
+                        </div>
+                    </div>
+
+                    @*<div class="form-group">
+                            <div class="form-group">
+                                <label>Status:</label><br>
+                                <input type="text" name="status" class="form-control" id="status" placeholder="Status">
+                            </div>
+                        </div>*@
+
+                    @*<div class="form-group">
+                            <div class="form-group">
+                                <label>Gender:</label><br>
+                                <input type="text" name="gender" class="form-control" id="gender" placeholder="Gender">
+                            </div>
+                        </div>*@
+
+                    <div class="form-group">
+                        <div class="form-group col-md-12">
+                            <label>Status:</label><br>
+                            <label>Active</label>
+                            <input id="active" name="status" value="True" type="radio">
+                            <label>In-Active</label>
+                            <input id="in-active" name="status" value="False" checked type="radio">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group col-md-12">
+                            <label>Gender:</label><br>
+                            <label>Male</label>
+                            <input id="male" name="gender" value="True" type="radio">
+                            <label>Female</label>
+                            <input id="female" name="gender" value="False" checked type="radio">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label>Phone Number:</label><br>
+                            <input type="text" name="phone_number" class="form-control" id="phone_number" placeholder="Phone number">
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">Submit</button>
+                        <button type="button" class="btn btn-danger" id="btnCancel">Cancel</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<!-- Modal -->
+<div id="mdLookup" class="modal fade" role="dialog">
+    <div class="modal-dialog  modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Country lookup</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="SearchBar">
+
+                    @*<div style="float:left; width:200px">
+                            Product ID
+                        </div>*@
+
+                    <div style="float:left; width:200px">
+                        Country Name
+                    </div>
+
+                    <div style="clear:both;"></div>
+
+                    @*<div style="float:left;  width:200px">
+                            <input id="c32a570b-2674-4a7b-9302-61a7c87253c5ProductID" type="text" value="" style="width:150px">
+                        </div>*@
+
+
+                    <div style="float:left;  width:200px ">
+                        <input id="txtCountryName" type="text" value="" style="width:150px">
+                    </div>
+
+                    <input id="btnSearch" type="button" value="Search">
+
+                </div>
+
+
+                <div style="clear:both;"></div>
+                <br />
+
+                @*<div id="updatePanel">
+                    </div>*@
+
+
+                <table class="table" id="tblData">
+                </table>
+
+
+
+                <div class="col-md-12 footerContent">
+                    <span id="divFirst" style="float:left;  width:70px">
+                        @*<a>&lt;&lt;&nbsp;First</a>*@
+
+                    </span>
+
+                    <span id="divPrev" style="float:left;  width:70px">
+                        @*<a>&lt;&nbsp;Prev</a>*@
+                    </span>
+
+                    <span id="divCurrent">
+                        <input id="currentPage" type="text" style="width:40px" value="1" /><label id="lblTotalPage"></label>
+                    </span>
+
+                    <span id="divNext" style="width:70px; margin-left: 20px">
+                        @*<a style="text-decoration:none" href="#">Next&nbsp;&gt;</a>*@
+                    </span>
+
+                    <span id="divLast" style="width:70px">
+                        @*<a style="text-decoration:none" href="#">Last&nbsp;&gt;&gt;</a>*@
+                    </span>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="btnOkSelect">OK</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .myprofile-box {
+        /* margin-top: 50px;*/
+        width: 50%;
+        margin: 0 auto;
+    }
+</style>
+
+@section Scripts{
+
+
+    <script src="~/admin/js/user_create_edit.js"></script>
+  
+    <script src="~/admin/js/country_region.js"></script>
+}
+
+
+

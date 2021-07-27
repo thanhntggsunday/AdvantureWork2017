@@ -1,0 +1,168 @@
+﻿@using AdvantureWork.Common.DTO;
+@using AdvantureWork.Common.ViewModel;
+
+@model DataTableViewModel<AppUserRolesDTO>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<link href="~/admin/lib/Drop-Down-Combo-Tree/style.css" rel="stylesheet" />
+
+<h2 class="m-0 text-dark col-md-11 offset-md-1">    User-Role Management    </h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="div-btn-add-emp" class="col-sm-12 col-md-1 col-lg-1" float-left
+             style="padding-bottom: 20px;float: right; display:flex; justify-content:flex-end;">
+            <button type="button" id="btnAssignRole" class="btn w-100 btn-info" style="float: right;"
+                    data-toggle="modal"
+                    data-target="#modal-lg-assign-role">
+                <b>Assign</b>
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="tbl_user_role" class="table table-bordered table-striped" width="100%">
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container-fluid -->
+<!-- Modal -->
+
+
+<div class="modal fade" id="modal-lg-assign-role">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="needs-validation container" id="form-add-edit-role" action="" novalidate>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-title-id">Assign role</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <!-- <p>One fine body&hellip;</p> -->
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="col-md-12">
+                                        <label value="000" id="edit-flag"></label>
+
+                                        <div class="form-group">
+                                            <label>
+                                                メンバー検索
+                                            </label>
+
+                                            <div class="row">
+
+                                                <div class="col-lg-6" id="div-members">
+
+                                                    <input type="text" id="members-id" class="col-md-12" placeholder="Select" />
+                                                </div>
+                                                <!-- </div> -->
+                                                <div class="col-md-12">
+
+
+                                                    <span id="msg-member"></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+
+                                        <!-- /.form-group -->
+                                        <div class="form-group">
+                                            <label>
+                                                ロール
+                                            </label>
+
+                                            <div class="row">
+
+
+                                                <div class="col-sm-12">
+
+                                                    <!-- <div id="roles"></div> -->
+
+                                                    <table id="roles-assign" style="width:100%"></table>
+                                                    <span id="msg-role"></span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- </form> -->
+                    </div>
+                </div>
+                <!-- /.tab-content -->
+                <!-- /.card-body -->
+
+
+                <div class="modal-footer justify-content-between">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-2" style="padding-bottom: 20px;">
+                                <button type="button" class="btn btn-danger btn-block" id="closeAssignModal"
+                                        data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" id="saveAssignRolesToEmps" class="btn btn-primary btn-block">
+                                    Save
+                                </button>
+                            </div>
+
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{ 
+
+    <script src="~/admin/lib/Drop-Down-Combo-Tree/icontains.js"></script>
+    <script src="~/admin/lib/Drop-Down-Combo-Tree/comboTreePlugin.js"></script>
+    <script src="~/admin/js/user_role.js"></script>
+    <script src="~/admin/js/assign_user_role.js"></script>
+
+
+}
+
+
+

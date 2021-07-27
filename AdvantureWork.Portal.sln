@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.Portal", "AdvantureWork.Portal\AdvantureWork.Portal.csproj", "{2993EC3E-DF36-4466-9C63-EF4E53E7B287}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.Common", "AdvantureWork.Common\AdvantureWork.Common.csproj", "{CC5D0FAD-C0C2-4FC3-999A-B2529F1478C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.Model", "AdvantureWork.Model\AdvantureWork.Model.csproj", "{2BA28B7E-624C-4B0C-B9B6-1B78A74D5377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.DataService", "AdvantureWork.DataService\AdvantureWork.DataService.csproj", "{BCC0EFCF-33B1-4268-A308-3623D866DBD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.BusinessService", "AdvantureWork.BusinessService\AdvantureWork.BusinessService.csproj", "{5F6D350F-5CE6-4FB5-83F3-7A0C46F8B776}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{337303B5-EA72-49E9-8333-D3F48E816ECE}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvantureWork.Api", "AdvantureWork.Api\AdvantureWork.Api.csproj", "{16081508-6D63-4A9A-A537-357173F4D724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2993EC3E-DF36-4466-9C63-EF4E53E7B287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2993EC3E-DF36-4466-9C63-EF4E53E7B287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2993EC3E-DF36-4466-9C63-EF4E53E7B287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2993EC3E-DF36-4466-9C63-EF4E53E7B287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5D0FAD-C0C2-4FC3-999A-B2529F1478C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5D0FAD-C0C2-4FC3-999A-B2529F1478C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5D0FAD-C0C2-4FC3-999A-B2529F1478C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5D0FAD-C0C2-4FC3-999A-B2529F1478C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA28B7E-624C-4B0C-B9B6-1B78A74D5377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA28B7E-624C-4B0C-B9B6-1B78A74D5377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA28B7E-624C-4B0C-B9B6-1B78A74D5377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA28B7E-624C-4B0C-B9B6-1B78A74D5377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC0EFCF-33B1-4268-A308-3623D866DBD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC0EFCF-33B1-4268-A308-3623D866DBD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC0EFCF-33B1-4268-A308-3623D866DBD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC0EFCF-33B1-4268-A308-3623D866DBD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6D350F-5CE6-4FB5-83F3-7A0C46F8B776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6D350F-5CE6-4FB5-83F3-7A0C46F8B776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6D350F-5CE6-4FB5-83F3-7A0C46F8B776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6D350F-5CE6-4FB5-83F3-7A0C46F8B776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16081508-6D63-4A9A-A537-357173F4D724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16081508-6D63-4A9A-A537-357173F4D724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16081508-6D63-4A9A-A537-357173F4D724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16081508-6D63-4A9A-A537-357173F4D724}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {898EABBF-3DD0-48FA-B9DF-1EE54D745203}
+	EndGlobalSection
+EndGlobal
